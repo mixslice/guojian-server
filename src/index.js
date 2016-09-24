@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.post('/upload', (req, res) => {
   // mobile, name, serverId
   const { serverId } = req.body;
-  const accessToken = '';
+  const accessToken = 'SiKDETwU2gSJ57PfWlACibP6h7QJXhFRlE2zk-tU_X8RNQbfew_LUvzShFzp-Z_Y8PJtoVjvR0e8me7lpyU2k8kBLFyDjFYQusyUknR-Bb0LRTfucES6hjxC1VFjGkaoYHWfAIAQZO';
   const weixinApi = 'http://file.api.weixin.qq.com/cgi-bin/media/get';
   const imageUrl = `${weixinApi}?access_token=${accessToken}&media_id=${serverId}`;
   downloadImage(imageUrl)
@@ -45,7 +45,7 @@ app.post('/upload', (req, res) => {
 
 app.get('/image/:uid', (req, res) => {
   const uid = req.params.uid;
-  res.sendFile(uid, { root: path.join(__dirname, '../output') });
+  res.sendFile(uid, { root: path.join(__dirname, '../output/frame') });
 });
 
 

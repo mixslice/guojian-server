@@ -71,5 +71,6 @@ jspm_packages
 
 ### Custom ###
 dist/
-output/
-upload/
+output/*
+upload/*
+!.keep
